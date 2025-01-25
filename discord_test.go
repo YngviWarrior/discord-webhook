@@ -11,7 +11,7 @@ import (
 var ds discordService.DiscordInterface
 
 func TestMain(m *testing.M) {
-	ds := discordService.NewDiscordWebhook()
+	ds = discordService.NewDiscordWebhook()
 
 	code := m.Run()
 	os.Exit(code)
