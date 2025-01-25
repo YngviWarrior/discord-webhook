@@ -1,4 +1,4 @@
-package discordStructs
+package discordService
 
 import (
 	"bytes"
