@@ -11,11 +11,11 @@ import (
 
 type discord struct{}
 
-type DiscordInterface interface {
+type discordInterface interface {
 	SendNotification(params *discordstructs.Notification)
 }
 
-func NewDiscordWebhook() DiscordInterface {
+func NewDiscordWebhook() discordInterface {
 	return &discord{}
 }
 
