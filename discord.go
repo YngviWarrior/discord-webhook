@@ -19,7 +19,7 @@ func NewDiscordWebhook() DiscordInterface {
 	return &discord{}
 }
 
-const discordBaseURL = "https://discord.com/api/webhooks"
+const discordBaseURL = "https://discordapp.com/api/webhooks"
 
 func (s *discord) SendNotification(params *discordstructs.Notification) {
 	client := &http.Client{}
