@@ -9,15 +9,19 @@ import (
 	discordstructs "github.com/YngviWarrior/discord-webhook/discordStructs"
 )
 
-type Discord struct{}
+type discord struct{}
 
 type DiscordInterface interface {
 	SendNotification(params *discordstructs.Notification)
 }
 
+func NewDiscordWebhook() DiscordInterface {
+	return &discord{}
+}
+
 const discordBaseURL = "https://discord.com/api/webhooks"
 
-func (s *Discord) SendNotification(params *discordstructs.Notification) {
+func (s *discord) SendNotification(params *discordstructs.Notification) {
 	client := &http.Client{}
 
 	jsonstr, _ := json.Marshal(params)
